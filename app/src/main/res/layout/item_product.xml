@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Header với brand và warranty -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/brandBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_back"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:layout_marginEnd="8dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Warranty Badge -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/warrantyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Empty"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/warrantyPeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DES\nSCRIPTION"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Product Image Container -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_round_gray">
+
+            <!-- Main Product Image -->
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_productA" />
+
+            <!-- Gift Box /phần này để thêm quà tặng kèm -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From 18-24.5"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_margin="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gift"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gift Description"
+                    android:textColor="@android:color/black"
+                    android:textSize="8sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- Product Variants -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 available categories"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Variant Images -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:id="@+id/variant1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/cardview_light_background"
+                android:padding="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_image" />
+
+            <ImageView
+                android:id="@+id/variant2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/cardview_light_background"
+                android:padding="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_image" />
+
+            <ImageView
+                android:id="@+id/variant3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/cardview_light_background"
+                android:padding="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_image" />
+
+        </LinearLayout>
+
+        <!-- Price Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₫"
+                        android:textColor="#e74c3c"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/discountPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100.000"
+                        android:textColor="#e74c3c"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/originalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₫700.000"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!-- Favorite Button -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/soldCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sold 46"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageView
+                    android:id="@+id/favoriteIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/ic_like"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- Promotion Tags -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy a minimum of ₫200k to get 8% off"
+                android:textSize="10sp"
+                android:textColor="#e74c3c"
+                android:padding="4dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy to receive gifts"
+                android:textSize="10sp"
+                android:textColor="#e74c3c"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+        <!-- Product Name -->
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:lineSpacingExtra="2dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Delivery Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/ic_icon_order"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pick up from June 4 - June 7\nFree Shipping"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Free ₫15,000 voucher if the order is delivered after the above time."
+                android:textSize="10sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Guarantee Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/ic_icon_shield"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/guaranteeInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="15-Day Free Return • 100% Genuine"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:id="@+id/chatButton"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/ic_chat"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat now"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addToCartButton"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/ic_cart"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add to Cart"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buyNowButton"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <Button
+                    android:background="@color/cardview_dark_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Buy with voucher \n ₫100.000"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Hidden Views for Firebase Data Binding (phần dự phòng) -->
+        <!-- Các TextView này sẽ được sử dụng để binding dữ liệu từ Firebase -->
+        <TextView
+            android:id="@+id/productId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/createdAt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/updatedAt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/brandName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/productDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/stockQuantity"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/categoryId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/productTags"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

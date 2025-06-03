@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Thanh tìm kiếm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ff6750a4"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/ic_back"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:contentDescription="Back" />
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@color/design_default_color_background"
+            android:hint="Search"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="8dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:textColorHint="#888" />
+
+        <ImageView
+            android:id="@+id/btnCart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:src="@mipmap/ic_cart2"
+            android:contentDescription="Cart" />
+    </LinearLayout>
+
+    <!-- Danh sách sản phẩm -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:scrollbars="vertical" />
+
+    <!-- Loading -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+</LinearLayout>
