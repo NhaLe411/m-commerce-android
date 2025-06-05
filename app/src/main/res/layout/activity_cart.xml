@@ -35,93 +35,188 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF" />
+
+        <!-- Clear All Button -->
+        <TextView
+            android:id="@+id/btnClearAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear All"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true" />
     </LinearLayout>
 
-
-
-    <LinearLayout
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-        <!-- Sản phẩm 1 -->
-        <TextView
-            android:text="Shop DAE"
-            android:textStyle="bold"
-            android:textSize="23sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/cartContainer"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:gravity="center_vertical">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@mipmap/ic_productA" />
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_marginStart="8dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:text="Product A"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:text="₫100.000"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FF5722"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-            <LinearLayout
+            <!-- Sản phẩm 1 -->
+            <TextView
+                android:text="Shop DAE"
+                android:textStyle="bold"
+                android:textSize="23sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/productItem1"
                 android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:gravity="center_vertical">
 
-                <ImageButton
-                    android:id="@+id/btnMinus"
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/ic_productA" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@android:color/transparent"
-                    android:src="@mipmap/ic_minus"
-                    android:contentDescription="Minus" />
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Product A"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="₫100.000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FF5722"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <!-- Quantity Controls -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnMinus"
+                            android:layout_weight="1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@android:color/transparent"
+                            android:src="@mipmap/ic_minus"
+                            android:contentDescription="Minus" />
+
+                        <TextView
+                            android:id="@+id/quantity_text"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/btnPlus"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:src="@mipmap/ic_plus"
+                            android:contentDescription="Plus" />
+
+                        <!-- Delete Button -->
+                        <ImageButton
+                            android:id="@+id/btnDelete1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@android:color/transparent"
+                            android:src="@android:drawable/ic_menu_delete"
+                            android:contentDescription="Delete"
+                            android:layout_marginBottom="4dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="8dp" />
+
+            <!-- Empty Cart Message (Initially Hidden) -->
+            <LinearLayout
+                android:id="@+id/emptyCartLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="32dp"
+                android:visibility="gone">
 
                 <TextView
-                    android:id="@+id/quantity_text"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="1"
-                    android:textSize="16sp" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your cart is empty"
+                    android:textSize="18sp"
+                    android:textColor="#666666"
+                    android:gravity="center" />
 
-                <ImageButton
-                    android:id="@+id/btnPlus"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:src="@mipmap/ic_plus"
-                    android:contentDescription="Plus" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add some products to get started"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp" />
             </LinearLayout>
         </LinearLayout>
+    </ScrollView>
+
+    <!-- Total and Checkout Section -->
+    <LinearLayout
+        android:id="@+id/checkoutSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#F5F5F5">
+
+        <TextView
+            android:id="@+id/totalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: ₫100.000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_gravity="end"
+            android:layout_marginBottom="8dp" />
 
         <Button
             android:id="@+id/btn_checkout"
@@ -129,7 +224,6 @@
             android:layout_height="wrap_content"
             android:text="Continue to Payment"
             android:textAllCaps="false"
-            android:layout_marginTop="490dp"
             android:background="#FF5722"
             android:textColor="#FFFFFF" />
     </LinearLayout>
