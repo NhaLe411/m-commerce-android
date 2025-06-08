@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvVoucherTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10% Off Orders"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#333"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/tvVoucherDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Applicable for orders from 200k"
+                    android:textSize="14sp"
+                    android:textColor="#666"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 points"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:layout_gravity="top"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvVoucherForStoreOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Only applicable in-store"
+            android:textSize="12sp"
+            android:textColor="#FF9800"
+            android:padding="4dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnRedeemVoucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Redeem Now"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>
